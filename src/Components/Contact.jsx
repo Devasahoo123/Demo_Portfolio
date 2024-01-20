@@ -22,7 +22,12 @@ function Contact() {
     alert(
       `my Name is ${data.fullName}. My phone number is ${data.phone}`
     );
-    
+    setData({
+      fullName:'',
+      phone:'',
+      email:'',
+      password:''
+    })
   };
  
   return (
@@ -39,6 +44,7 @@ function Contact() {
                 <div class="col-sm-10">
                   <input 
                   type="text" 
+                  required
                   readonly class="form-control" 
                   id="staticEmail" 
                   name='fullName' 
@@ -53,6 +59,7 @@ function Contact() {
                 <div class="col-sm-10">
                   <input 
                   type="tel" 
+                  required
                   readonly class="form-control" 
                   id="staticEmail" 
                   name='phone' 
@@ -67,6 +74,7 @@ function Contact() {
                 <div class="col-sm-10">
                   <input 
                   type="text" 
+                  required
                   readonly class="form-control" 
                   id="staticEmail" 
                   name='email' 
@@ -79,7 +87,8 @@ function Contact() {
               <div class="form-group row">
                 <label for="inputPassword" class="col-sm-2 col-form-label">Password</label>
                 <div class="col-sm-10">
-                  <input type="password" 
+                  <input type="password"
+                  required 
                   class="form-control" 
                   id="inputPassword" 
                   name='password' 
